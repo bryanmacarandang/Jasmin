@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Jas, Future RN 🩺💗</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!--
+  HOW TO ADD YOUR PHOTOS
+  1. Put your pictures (.jpg .png .webp) in the "images" folder next to this file.
+  2. Open script.js and list them in the PHOTOS array at the top.
+  3. Or just tap "ADD PHOTOS" on the page to try pictures instantly (they last until you refresh).
+-->
+<div id="sky" aria-hidden="true"></div>
+
+<button id="musicBtn" class="btn small" aria-pressed="false" aria-label="Toggle music">🎵 MUSIC: OFF</button>
+
+<header id="hero">
+  <div id="heroFloat" class="float-layer" aria-hidden="true"></div>
+  <div id="nurse" class="nurse" role="img" aria-label="Cute pixel nurse holding a stethoscope"></div>
+  <h1 id="title" aria-label="Pinning a nurse">CONGRATULATIONS</h1>
+  <p class="sub"> MARIE,POKNAT,NEGNEG, AND JASMIN!</p>
+  <div class="card px">
+    <p>Happy Pinning Day! 
+        That pin represents every single sacrifice, sleepless nights, and moment you chose not to give up when things got stressful.
+        Wear it proud! You’re going to be the most patient, brave, and caring nurse out there. Good luck on becoming an Regsitered Nurse!</p>
+  </div>
+  <a href="#gallery" class="scroll-hint">SCROLL DOWN ▼</a>
+</header>
+
+<section id="gallery" class="reveal">
+  <div class="float-layer" id="galFloat" aria-hidden="true"></div>
+  <!-- <h2>EVERY PICTURE HOLDS A BEAUTIFUL MEMORY 📸💗</h2>
+  <p class="lead">Little moments, big dreams, and unforgettable memories on your journey to becoming an RN.</p> -->
+  <div class="toolbar">
+    <!-- <label class="btn small blue" for="fileIn">📷 ADD PHOTOS</label> -->
+    <input id="fileIn" type="file" accept="image/jpeg,image/png,image/webp" multiple hidden>
+  </div>
+  <div class="strip">
+    <button class="arrow btn small" id="prev" aria-label="Previous photo">◀</button>
+    <div id="viewport"><div id="track"></div></div>
+    <button class="arrow btn small" id="next" aria-label="Next photo">▶</button>
+  </div>
+  <!-- <p class="hint">Tap a photo to enlarge it and edit its caption. Drag or swipe to browse.</p> -->
+</section>
+
+<section id="surprise" class="reveal">
+  <button id="openSurprise" class="btn big">💌 OPEN YOUR SURPRISE!</button>
+</section>
+
+<footer id="final">
+  <div class="float-layer" id="finFloat" aria-hidden="true"></div>
+  <div id="bigHeart" aria-hidden="true"></div>
+  <h2>GOOD LUCK TO BECOMING A REGISTERED NURSE!</h2>
+  <p class="sub">YOUR JOURNEY IS JUST BEGINNING, JASMIN! 🩺💗</p>
+  <button id="replayAch" class="btn small blue">🏆 REPLAY ACHIEVEMENT</button>
+</footer>
+
+<div id="ach" role="status" aria-live="polite">
+  <div id="trophy"></div>
+  <div><b>ACHIEVEMENT UNLOCKED! 🏆</b><span>JASMIN, NEXT REGISTERED NURSE!</span></div>
+</div>
+
+<div id="modal" class="overlay" hidden role="dialog" aria-modal="true" aria-label="Your surprise letter">
+  <div class="stage">
+    <div id="env" class="env"><div class="flap"></div><div class="pocket">💗</div></div>
+    <div id="letter" class="letter px" hidden>
+      <div id="nurse2" class="nurse small-n"></div>
+      <h3>DEAR JASMIN,</h3>
+      <p>Congratulations, Jas! 
+        All those sleepless nights, difficult exams, and every RetDem you pushed through have finally brought you to this moment. The pin on your uniform represents your hard work and the caring heart you have.
+        I know these past few days have been a little difficult for you because Tita won't be able to be there, but I know she is so proud of you. Nothing would make her happier than seeing you achieve your dream. Even your Ate and Kuya are so proud of you.
+        And of course, Me!, I'm always here to support you, no matter what. We are all so proud of you, Future Registered Nurse! 🩺💗</p>
+      <p><b>GOOD LUCK TO BECOMING A REGISTERED NURSE! </b></p>
+      <button id="closeLetter" class="btn">KEEP CHASING YOUR DREAM! 💗</button>
+    </div>
+  </div>
+</div>
+
+<div id="lb" class="overlay" hidden role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <div class="lb-frame px">
+    <button id="lbClose" class="btn small close" aria-label="Close">✕</button>
+    <img id="lbImg" alt="">
+    <input id="lbCap" type="text" maxlength="40" aria-label="Photo caption">
+    <div class="lb-nav"><button id="lbPrev" class="btn small" aria-label="Previous">◀</button><button id="lbNext" class="btn small" aria-label="Next">▶</button></div>
+  </div>
+</div>
+
+<canvas id="confetti" aria-hidden="true"></canvas>
+<script src="script.js"></script>
+</body>
+</html>
